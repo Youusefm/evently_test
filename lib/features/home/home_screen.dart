@@ -1,0 +1,59 @@
+import 'package:evently_test/core/resources/colors_manager/colors_manager.dart';
+import 'package:evently_test/features/home/tabs/favorite_tab/favorite_tab.dart';
+import 'package:evently_test/features/home/tabs/home_tab/home_tab.dart';
+import 'package:evently_test/features/home/tabs/profile_tab/profile_tab.dart';
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatefulWidget {
+  HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int currentIndex = 0;
+
+  List<Widget> screens = [HomeTab(), FavoriteTab(), ProfileTab()];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: screens[currentIndex],
+      bottomNavigationBar: _bottomNavigationBar(),
+    );
+  }
+
+  BottomNavigationBar _bottomNavigationBar() {
+    return BottomNavigationBar(
+      currentIndex: currentIndex,
+      iconSize: 24,
+      onTap: (value) {
+        setState(() {
+          currentIndex = value;
+        });
+      },
+
+      items: [
+        BottomNavigationBarItem(
+          icon: currentIndex == 0
+              ? Icon(Icons.home)
+              : Icon(Icons.home_outlined),
+          label: "Home",
+        ),
+        BottomNavigationBarItem(
+          icon: currentIndex == 1
+              ? Icon(Icons.favorite_outlined)
+              : Icon(Icons.favorite_outline),
+          label: "Favorite",
+        ),
+        BottomNavigationBarItem(
+          icon: currentIndex == 2
+              ? Icon(Icons.person)
+              : Icon(Icons.person_outline),
+          label: "profile",
+        ),
+      ],
+    );
+  }
+}

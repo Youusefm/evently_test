@@ -5,27 +5,27 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ThemeManager {
   static ThemeData light = ThemeData(
-    scaffoldBackgroundColor: ColorsManager.white,
+    scaffoldBackgroundColor: ColorsManager.whitef4,
     inputDecorationTheme: InputDecorationTheme(
       fillColor: ColorsManager.white,
       filled: true,
-      prefixIconColor: ColorsManager.grey,
-      suffixIconColor: ColorsManager.grey,
+      prefixIconColor: ColorsManager.grey68,
+      suffixIconColor: ColorsManager.grey68,
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16.r),
-        borderSide: BorderSide(width: 1.w, color: ColorsManager.grey),
+        borderSide: BorderSide(width: 1.w, color: ColorsManager.grey68),
       ),
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16.r),
-        borderSide: BorderSide(width: 1.w, color: ColorsManager.grey),
+        borderSide: BorderSide(width: 1.w, color: ColorsManager.grey68),
       ),
       focusedErrorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16.r),
-        borderSide: BorderSide(width: 1.w, color: ColorsManager.grey),
+        borderSide: BorderSide(width: 1.w, color: ColorsManager.grey68),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16.r),
-        borderSide: BorderSide(width: 1.w, color: ColorsManager.grey),
+        borderSide: BorderSide(width: 1.w, color: ColorsManager.grey68),
       ),
     ),
     textTheme: TextTheme(
@@ -37,17 +37,37 @@ class ThemeManager {
       labelSmall: GoogleFonts.poppins(
         fontSize: 14.sp,
         fontWeight: FontWeight.w400,
-        color: ColorsManager.grey,
+        color: ColorsManager.grey68,
       ),
       bodySmall: GoogleFonts.poppins(
         fontSize: 14.sp,
         fontWeight: FontWeight.w600,
-        color: ColorsManager.grey,
+        color: ColorsManager.grey68,
       ),
       displaySmall: GoogleFonts.poppins(
         fontSize: 14.sp,
         fontWeight: FontWeight.w600,
         color: ColorsManager.blue0E,
+      ),
+      headlineMedium: GoogleFonts.poppins(
+        fontSize: 20.sp,
+        fontWeight: FontWeight.w500,
+        color: ColorsManager.black1c,
+      ),
+      labelMedium: GoogleFonts.poppins(
+        fontSize: 16.sp,
+        fontWeight: FontWeight.w500,
+        color: ColorsManager.black1c,
+      ),
+      titleSmall: GoogleFonts.poppins(
+        fontSize: 14.sp,
+        fontWeight: FontWeight.w500,
+        color: ColorsManager.black1c,
+      ),
+      headlineLarge: GoogleFonts.poppins(
+        fontSize: 16.sp,
+        fontWeight: FontWeight.w600,
+        color: ColorsManager.black1c,
       ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -60,6 +80,12 @@ class ThemeManager {
         backgroundColor: ColorsManager.blue0E,
         padding: EdgeInsets.symmetric(vertical: 9.h, horizontal: 133.5.w),
       ),
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: ColorsManager.blue0E,
+      unselectedItemColor: ColorsManager.greyB9,
+      backgroundColor: ColorsManager.white,
+      type: BottomNavigationBarType.fixed,
     ),
   );
   static ThemeData dark = ThemeData();

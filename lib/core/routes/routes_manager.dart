@@ -1,3 +1,4 @@
+import 'package:evently_test/features/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/auth/login/login_screen.dart';
@@ -23,7 +24,11 @@ class RoutesManager {
           builder: (_) => RegisterScreen(),
           settings: settings,
         );
-
+      case homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => HomeScreen(),
+          settings: settings,
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => const NotFoundScreen(),
