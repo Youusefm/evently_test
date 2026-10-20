@@ -1,4 +1,5 @@
-import 'package:evently_test/core/resources/colors_manager/colors_manager.dart';
+import 'package:evently_test/core/routes/routes_manager.dart';
+import 'package:evently_test/features/create_event/create_event.dart';
 import 'package:evently_test/features/home/tabs/favorite_tab/favorite_tab.dart';
 import 'package:evently_test/features/home/tabs/home_tab/home_tab.dart';
 import 'package:evently_test/features/home/tabs/profile_tab/profile_tab.dart';
@@ -21,6 +22,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: screens[currentIndex],
       bottomNavigationBar: _bottomNavigationBar(),
+      floatingActionButton: FloatingActionButton(
+        shape: CircleBorder(),
+        onPressed: () {
+          Navigator.pushReplacementNamed(context, RoutesManager.createEvent);
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 

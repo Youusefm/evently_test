@@ -10,17 +10,20 @@ class CustomTextFormFiled extends StatelessWidget {
     this.suffixIcon,
     this.controller,
     this.validator,
-    this.isscure = true,
+    this.isscure = false,
+    this.maxLines = 1,
   });
   String? labelText;
   Widget? prefixIcon;
   Widget? suffixIcon;
   bool isscure;
+  int maxLines;
   TextEditingController? controller;
   String? Function(String?)? validator;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLines: maxLines,
       obscureText: isscure,
       validator: validator,
       controller: controller,

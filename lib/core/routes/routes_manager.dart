@@ -1,3 +1,4 @@
+import 'package:evently_test/features/create_event/create_event.dart';
 import 'package:evently_test/features/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ class RoutesManager {
   static const String login = '/login';
   static const String register = '/register';
   static const String homeScreen = '/homeScreen';
+  static const String createEvent = '/createEvent';
 
   // Generate routes
   static Route<dynamic>? getRoute(RouteSettings settings) {
@@ -27,6 +29,11 @@ class RoutesManager {
       case homeScreen:
         return MaterialPageRoute(
           builder: (_) => HomeScreen(),
+          settings: settings,
+        );
+      case createEvent:
+        return MaterialPageRoute(
+          builder: (_) => CreateEvent(),
           settings: settings,
         );
       default:

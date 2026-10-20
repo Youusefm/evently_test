@@ -5,6 +5,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ThemeManager {
   static ThemeData light = ThemeData(
+    hintColor: ColorsManager.blue0E,
+    appBarTheme: AppBarThemeData(
+      backgroundColor: ColorsManager.whitef4,
+      titleTextStyle: GoogleFonts.poppins(
+        fontSize: 16,
+        fontWeight: FontWeight.w500,
+        color: ColorsManager.black1c,
+      ),
+      centerTitle: true,
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: ColorsManager.blue0E,
+      foregroundColor: ColorsManager.white,
+    ),
     scaffoldBackgroundColor: ColorsManager.whitef4,
     inputDecorationTheme: InputDecorationTheme(
       fillColor: ColorsManager.white,
@@ -48,7 +62,10 @@ class ThemeManager {
         fontSize: 14.sp,
         fontWeight: FontWeight.w600,
         color: ColorsManager.blue0E,
+        decoration: TextDecoration.underline,
+        decorationColor: ColorsManager.blue0E,
       ),
+
       headlineMedium: GoogleFonts.poppins(
         fontSize: 20.sp,
         fontWeight: FontWeight.w500,
@@ -78,7 +95,7 @@ class ThemeManager {
           fontWeight: FontWeight.w500,
         ),
         backgroundColor: ColorsManager.blue0E,
-        padding: EdgeInsets.symmetric(vertical: 9.h, horizontal: 133.5.w),
+        padding: EdgeInsets.symmetric(vertical: 9.h, horizontal: 120.w),
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
