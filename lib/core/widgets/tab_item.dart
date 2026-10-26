@@ -14,15 +14,19 @@ class TabItem extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 16.w),
       decoration: BoxDecoration(
-        color: isSelected ? ColorsManager.blue0E : ColorsManager.white,
+        color: isSelected
+            ? Theme.of(context).hintColor
+            : Theme.of(context).primaryColor,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: ColorsManager.greyB9, width: 1.w),
+        border: Border.all(color: Theme.of(context).disabledColor, width: 1.w),
       ),
       child: Row(
         children: [
           Icon(
             category.icon,
-            color: isSelected ? ColorsManager.white : ColorsManager.blue0E,
+            color: isSelected
+                ? ColorsManager.white
+                : Theme.of(context).hintColor,
           ),
           SizedBox(width: 8.w),
           Text(

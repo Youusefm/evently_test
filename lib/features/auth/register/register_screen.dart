@@ -2,6 +2,7 @@ import 'package:evently_test/core/routes/routes_manager.dart';
 import 'package:evently_test/core/widgets/custom_elevated_button.dart';
 import 'package:evently_test/core/widgets/custom_text_button.dart';
 import 'package:evently_test/core/widgets/validator.dart';
+import 'package:evently_test/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/resources/images_manager/images_manager.dart';
@@ -38,6 +39,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     super.dispose();
   }
 
+  late AppLocalizations _appLocalizations = AppLocalizations.of(context)!;
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   bool isscured = true;
 
@@ -56,21 +58,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 Image.asset(ImagesManager.evently_word),
                 SizedBox(height: 48.h),
                 Text(
-                  "Create your account",
+                  _appLocalizations.createYourAccount,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 SizedBox(height: 24.h),
                 CustomTextFormFiled(
                   validator: Validator.validateName,
                   controller: _nameController,
-                  labelText: "Enter your name",
+                  labelText: _appLocalizations.enterYourName,
                   prefixIcon: Icon(Icons.person_outline_outlined),
                 ),
                 SizedBox(height: 16.h),
                 CustomTextFormFiled(
                   validator: Validator.validateEmail,
                   controller: _emailController,
-                  labelText: "Enter your email",
+                  labelText: _appLocalizations.enterYourEmail,
                   prefixIcon: Icon(Icons.email_outlined),
                 ),
                 SizedBox(height: 16.h),
@@ -79,7 +81,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   isscure: isscured,
                   validator: Validator.validatePassword,
                   controller: _passwordController,
-                  labelText: "Enter your password",
+                  labelText: _appLocalizations.enterYourPassword,
                   prefixIcon: Icon(Icons.lock_outline),
                   suffixIcon: IconButton(
                     icon: Icon(
@@ -104,7 +106,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   },
                   isscure: isscured,
                   controller: _confirmPasswordController,
-                  labelText: "Confirm your password",
+                  labelText: _appLocalizations.confirmYourPassword,
                   prefixIcon: Icon(Icons.lock_outline),
                   suffixIcon: IconButton(
                     icon: Icon(
@@ -120,18 +122,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
                 SizedBox(height: 60.h),
 
-                CustomElevatedButton(text: "Sign Up", onpressed: _register),
+                CustomElevatedButton(
+                  text: _appLocalizations.signUp,
+                  onpressed: _register,
+                ),
                 SizedBox(height: 48.h),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Already have an account?",
+                      _appLocalizations.alreadyHaveAnAccount,
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
                     CustomTextButton(
-                      text: " login",
+                      text: _appLocalizations.login,
                       onTap: () {
                         Navigator.pushReplacementNamed(
                           context,
@@ -154,10 +159,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
       final name = _nameController.text.trim();
       final email = _emailController.text.trim();
       final password = _passwordController.text;
-
-      print('Name: $name');
-      print('Email: $email');
-      print('Password: $password');
     }
   }
 }

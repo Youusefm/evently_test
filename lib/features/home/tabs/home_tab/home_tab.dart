@@ -2,6 +2,8 @@ import 'package:evently_test/core/resources/colors_manager/colors_manager.dart';
 import 'package:evently_test/core/widgets/custom_tab_bar.dart';
 import 'package:evently_test/features/home/tabs/home_tab/event_item.dart';
 import 'package:evently_test/core/widgets/tab_item.dart';
+import 'package:evently_test/l10n/app_localizations.dart';
+import 'package:evently_test/l10n/app_localizations_ar.dart';
 import 'package:evently_test/models/event_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,7 +20,7 @@ class HomeTab extends StatefulWidget {
 
 class _HomeTabState extends State<HomeTab> {
   int currentIndex = 0;
-
+  late AppLocalizations _appLocalizations = AppLocalizations.of(context)!;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -34,7 +36,7 @@ class _HomeTabState extends State<HomeTab> {
                   Column(
                     children: [
                       Text(
-                        "Welcome Back ✨",
+                        _appLocalizations.welcomeBack,
                         style: Theme.of(context).textTheme.labelSmall,
                       ),
                       Text(
@@ -76,12 +78,14 @@ class _HomeTabState extends State<HomeTab> {
                 ],
               ),
               SizedBox(height: 24.h),
-              CustomTabBar(categoryList: CategoryModel.categoriesWithAll),
+              CustomTabBar(
+                categoryList: CategoryModel.getCategoriesWithAll(context),
+              ),
               SizedBox(height: 24.h),
               Expanded(
                 child: ListView.separated(
                   itemBuilder: (context, index) {
-                    return EventItem(event: EventModel.events[2]);
+                    return EventItem(event: EventModel.getevents(context)[2]);
                   },
                   separatorBuilder: (context, index) => SizedBox(height: 16.h),
                   itemCount: 15,

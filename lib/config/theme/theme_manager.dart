@@ -6,10 +6,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ThemeManager {
   static ThemeData light = ThemeData(
     hintColor: ColorsManager.blue0E,
+    primaryColor: ColorsManager.white,
+    disabledColor: ColorsManager.greyB9,
+    cardColor: ColorsManager.white,
+    focusColor: ColorsManager.whitef4,
+
     appBarTheme: AppBarThemeData(
       backgroundColor: ColorsManager.whitef4,
       titleTextStyle: GoogleFonts.poppins(
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: FontWeight.w500,
         color: ColorsManager.black1c,
       ),
@@ -105,5 +110,110 @@ class ThemeManager {
       type: BottomNavigationBarType.fixed,
     ),
   );
-  static ThemeData dark = ThemeData();
+  static ThemeData dark = ThemeData(
+    scaffoldBackgroundColor: ColorsManager.blue00,
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: ColorsManager.blue45,
+      foregroundColor: ColorsManager.white,
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: ColorsManager.blue45,
+      unselectedItemColor: ColorsManager.greyB9,
+      backgroundColor: ColorsManager.blue00,
+      type: BottomNavigationBarType.fixed,
+    ),
+    appBarTheme: AppBarThemeData(
+      backgroundColor: ColorsManager.blue00,
+      titleTextStyle: GoogleFonts.poppins(
+        fontSize: 18,
+        fontWeight: FontWeight.w500,
+        color: ColorsManager.white,
+      ),
+      centerTitle: true,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        foregroundColor: ColorsManager.white,
+        textStyle: GoogleFonts.poppins(
+          fontSize: 20,
+          fontWeight: FontWeight.w500,
+        ),
+        backgroundColor: ColorsManager.blue45,
+        padding: EdgeInsets.symmetric(vertical: 9.h, horizontal: 120.w),
+      ),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      fillColor: ColorsManager.blue00,
+      filled: true,
+      prefixIconColor: ColorsManager.greyB9,
+      suffixIconColor: ColorsManager.greyB9,
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16.r),
+        borderSide: BorderSide(width: 1.w, color: ColorsManager.blue002D),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16.r),
+        borderSide: BorderSide(width: 1.w, color: ColorsManager.greyB9),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16.r),
+        borderSide: BorderSide(width: 1.w, color: ColorsManager.greyB9),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16.r),
+        borderSide: BorderSide(width: 1.w, color: ColorsManager.greyB9),
+      ),
+    ),
+    primaryColor: ColorsManager.blue002D,
+    hintColor: ColorsManager.blue45,
+    disabledColor: ColorsManager.blue00,
+    cardColor: ColorsManager.blue0014,
+    focusColor: ColorsManager.blue002D,
+
+    textTheme: TextTheme(
+      titleLarge: GoogleFonts.poppins(
+        fontSize: 24.sp,
+        fontWeight: FontWeight.w600,
+        color: ColorsManager.white,
+      ),
+      labelSmall: GoogleFonts.poppins(
+        fontSize: 14.sp,
+        fontWeight: FontWeight.w400,
+        color: ColorsManager.greyB9,
+      ),
+      bodySmall: GoogleFonts.poppins(
+        fontSize: 14.sp,
+        fontWeight: FontWeight.w600,
+        color: ColorsManager.greyD6,
+      ),
+      displaySmall: GoogleFonts.poppins(
+        fontSize: 14.sp,
+        fontWeight: FontWeight.w600,
+        color: ColorsManager.blue45,
+        decoration: TextDecoration.underline,
+        decorationColor: ColorsManager.blue45,
+      ),
+      headlineMedium: GoogleFonts.poppins(
+        fontSize: 20.sp,
+        fontWeight: FontWeight.w500,
+        color: ColorsManager.white,
+      ),
+      labelMedium: GoogleFonts.poppins(
+        fontSize: 16.sp,
+        fontWeight: FontWeight.w500,
+        color: ColorsManager.white,
+      ),
+
+      titleSmall: GoogleFonts.poppins(
+        fontSize: 14.sp,
+        fontWeight: FontWeight.w500,
+        color: ColorsManager.white,
+      ),
+      headlineLarge: GoogleFonts.poppins(
+        fontSize: 16.sp,
+        fontWeight: FontWeight.w600,
+        color: ColorsManager.white,
+      ),
+    ),
+  );
 }

@@ -1,0 +1,44 @@
+{
+  "loginToYourAccount": "Login to your account",
+  "enterYourEmail": "Enter your email",
+  "enterYourPassword": "Enter your password",
+  "forgetPassword": "Forget Password?",
+  "login": "Login",
+  "dontHaveAnAccount": "Don’t have an account? ",
+  "or": "Or",
+  "loginWithGoogle": "Login with Google",
+
+  "createYourAccount": "Create your account",
+  "enterYourName": "Enter your name",
+  "confirmYourPassword": "Confirm your password",
+  "signUp": "Sign up",
+  "alreadyHaveAnAccount": "Already have an account? ",
+  "signUpWithGoogle": "Sign up with Google",
+
+  "welcomeBack": "Welcome Back ✨",
+  "home": "Home",
+  "favorite": "Favorite",
+  "profile": "Profile",
+  "darkMode": "Dark mode",
+  "language": "Language",
+  "logout": "Logout",
+
+  "title": "Title",
+  "eventTitle": "Event Title",
+  "description": "Description",
+  "eventDescription": "Event Description",
+  "eventDate": "Event Date",
+  "chooseDate": "Choose date",
+  "chooseTime": "Choose time",
+  "eventTime": "Event Time",
+  "addEvent": "Add event",
+
+  "sport": "Sport",
+  "all": "All",
+  "birthday": "Birthday",
+  "meeting": "Meeting",
+  "gaming": "Gaming",
+  "workshop": "Workshop",
+  "searchForEvent": "Search For Event"
+
+}

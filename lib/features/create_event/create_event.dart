@@ -3,6 +3,7 @@ import 'package:evently_test/core/widgets/custom_elevated_button.dart';
 import 'package:evently_test/core/widgets/custom_tab_bar.dart';
 import 'package:evently_test/core/widgets/custom_text_button.dart';
 import 'package:evently_test/core/widgets/custom_text_form_filed.dart';
+import 'package:evently_test/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,28 +23,34 @@ class _CreateEventState extends State<CreateEvent> {
   TimeOfDay selecttime = TimeOfDay.now();
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations _applocalizations = AppLocalizations.of(context)!;
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text("Add event")),
+        appBar: AppBar(title: Text(_applocalizations.addEvent)),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: ListView(
             children: [
               Image.asset(ImagesManager.bookclubImage, fit: BoxFit.fill),
-              CustomTabBar(categoryList: CategoryModel.categories),
               SizedBox(height: 16.h),
 
-              Text("Title", style: Theme.of(context).textTheme.labelMedium),
+              CustomTabBar(categoryList: CategoryModel.getCategories(context)),
+              SizedBox(height: 16.h),
+
+              Text(
+                _applocalizations.title,
+                style: Theme.of(context).textTheme.labelMedium,
+              ),
               SizedBox(height: 8.h),
-              CustomTextFormFiled(labelText: "Event Title"),
+              CustomTextFormFiled(labelText: _applocalizations.eventTitle),
               SizedBox(height: 16.h),
               Text(
-                "Description ",
+                _applocalizations.description,
                 style: Theme.of(context).textTheme.labelMedium,
               ),
               SizedBox(height: 8.h),
               CustomTextFormFiled(
-                labelText: "Event Description....",
+                labelText: "${_applocalizations.eventDescription}....",
                 maxLines: 4,
               ),
               SizedBox(height: 16.h),
@@ -62,7 +69,10 @@ class _CreateEventState extends State<CreateEvent> {
                     style: Theme.of(context).textTheme.labelMedium,
                   ),
                   Spacer(),
-                  CustomTextButton(text: "Choose date", onTap: _showdatePicker),
+                  CustomTextButton(
+                    text: _applocalizations.chooseDate,
+                    onTap: _showdatePicker,
+                  ),
                 ],
               ),
               SizedBox(height: 16.h),
@@ -81,11 +91,17 @@ class _CreateEventState extends State<CreateEvent> {
                     style: Theme.of(context).textTheme.labelMedium,
                   ),
                   Spacer(),
-                  CustomTextButton(text: "Choose time", onTap: _showtimePicker),
+                  CustomTextButton(
+                    text: _applocalizations.chooseTime,
+                    onTap: _showtimePicker,
+                  ),
                 ],
               ),
 
-              CustomElevatedButton(text: "Add event", onpressed: () {}),
+              CustomElevatedButton(
+                text: _applocalizations.addEvent,
+                onpressed: () {},
+              ),
               SizedBox(height: 16.h),
             ],
           ),

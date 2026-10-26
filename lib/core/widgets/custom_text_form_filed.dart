@@ -31,7 +31,9 @@ class CustomTextFormFiled extends StatelessWidget {
         labelText: labelText,
         labelStyle: Theme.of(context).textTheme.labelSmall,
         prefixIcon: prefixIcon,
+        prefixIconColor: Theme.of(context).hintColor,
         suffixIcon: suffixIcon,
+        suffixIconColor: Theme.of(context).hintColor,
       ),
     );
   }

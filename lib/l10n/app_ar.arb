@@ -1,0 +1,44 @@
+{
+  "loginToYourAccount": "تسجيل الدخول إلى حسابك",
+  "enterYourEmail": "أدخل بريدك الإلكتروني",
+  "enterYourPassword": "أدخل كلمة المرور",
+  "forgetPassword": "هل نسيت كلمة المرور؟",
+  "login": "تسجيل الدخول",
+  "dontHaveAnAccount": "ليس لديك حساب؟",
+  "or": "أو",
+  "loginWithGoogle": "تسجيل الدخول باستخدام Google",
+
+  "createYourAccount": "إنشاء حسابك",
+  "enterYourName": "أدخل اسمك",
+  "confirmYourPassword": "تأكيد كلمة المرور",
+  "signUp": "إنشاء حساب",
+  "alreadyHaveAnAccount": "لديك حساب بالفعل؟",
+  "signUpWithGoogle": "إنشاء حساب باستخدام Google",
+
+  "welcomeBack": "مرحبًا بعودتك ✨",
+  "home": "الرئيسية",
+  "favorite": "المفضلة",
+  "profile": "الملف الشخصي",
+  "darkMode": "الوضع الداكن",
+  "language": "اللغة",
+  "logout": "تسجيل الخروج",
+
+  "title": "العنوان",
+  "eventTitle": "عنوان الحدث",
+  "description": "الوصف",
+  "eventDescription": "وصف الحدث",
+  "eventDate": "تاريخ الحدث",
+  "chooseDate": "اختر التاريخ",
+  "chooseTime": "اختر الوقت",
+  "eventTime": "وقت الحدث",
+  "addEvent": "إضافة حدث",
+
+
+  "all": "الكل",
+  "sport": "رياضة",
+  "birthday": "عيد ميلاد",
+  "meeting": "اجتماع",
+  "gaming": "ألعاب",
+  "workshop": "ورشة عمل",
+  "searchForEvent": "البحث عن حدث"
+}

@@ -1,3 +1,4 @@
+import 'package:evently_test/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,6 +11,7 @@ class FavoriteTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late AppLocalizations _apploccalization = AppLocalizations.of(context)!;
     return SafeArea(
       child: Scaffold(
         body: Padding(
@@ -17,14 +19,14 @@ class FavoriteTab extends StatelessWidget {
           child: Column(
             children: [
               CustomTextFormFiled(
-                labelText: "Search for event",
+                labelText: _apploccalization.searchForEvent,
                 suffixIcon: Icon(Icons.search),
               ),
               SizedBox(height: 24.h),
               Expanded(
                 child: ListView.separated(
                   itemBuilder: (context, index) {
-                    return EventItem(event: EventModel.events[2]);
+                    return EventItem(event: EventModel.getevents(context)[2]);
                   },
                   separatorBuilder: (context, index) => SizedBox(height: 16.h),
                   itemCount: 15,
